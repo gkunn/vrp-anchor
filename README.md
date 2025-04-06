@@ -5,4 +5,4 @@ This script includes flexible configuration options to tailor restrictions and b
 Adding supported vehicles is quick and easy through the `config.lua` file—no coding required.
 
 #  Note:
-When adding new vehicles, it is strongly recommended to enable debug mode (Config.Debug = true) to ensure correct setup and identification.
+When adding new vehicles, it is strongly recommended to enable debug mode `Config.Debug = true` to ensure correct setup and identification.
