@@ -14,6 +14,8 @@ Adding supported vehicles is quick and easy through the `config.lua` file—no c
 
 #  Note:
 When adding new vehicles, it is strongly recommended to enable debug mode `Config.Debug = true` to ensure correct setup and identification.
+The command `/anchor` can be used to see the model name of the vehicle with F8.
 
 ---
 新しい車両を追加する際には、正しいセットアップと識別を確実にするために、デバッグモ ード`Config.Debug = true`を有効にすることを強くお勧めします。
+コマンド`/anchor`を使用すると、F8で車両のモデル名を確認できます。
