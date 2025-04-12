@@ -66,14 +66,14 @@ local function ToggleAnchor()
 
     local speed = GetEntitySpeed(vehicle)
     if speed > Config.MaxSpeed then
-        QBCore.Functions.Notify(Locales[Config.locale].speed_too_high, "error")
+        QBCore.Functions.Notify(string.format(Locales[Config.locale].speed_too_high, Config.MaxSpeed, Config.SpeedUnit),"error")
         return
     end
 
     if IsHeli then
         local altitude = GetAltitude(vehicle)
         if altitude > Config.MaxAltitude then
-            QBCore.Functions.Notify(Locales[Config.locale].altitude_too_high, "error")
+            QBCore.Functions.Notify(string.format(Locales[Config.locale].altitude_too_high, Config.MaxAltitude), "error")
             return
         end
     end
@@ -119,7 +119,13 @@ CreateThread(function()
             sleep = 1000
 
             local speed = GetEntitySpeed(lastVehicle)
-            if speed > Config.MaxSpeed then
+            if Config.SpeedUnit == "kmh" then
+                displaySpeed = speed * 3.6
+            elseif Config.SpeedUnit == "mph" then
+                displaySpeed = speed * 2.236936
+            end
+
+            if displaySpeed > Config.MaxSpeed then
                 isAnchored = false
                 SetBoatAnchor(lastVehicle, false)
                 QBCore.Functions.Notify(Locales[Config.locale].anchor_removed_speed, "error")

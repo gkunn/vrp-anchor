@@ -1,5 +1,5 @@
 Config = {}
-Config.Debug = true -- Debug mode (true to print statement)
+Config.Debug = false -- Debug mode (true to print statement)
 
 Config.locale = 'ja' -- Can be set to "ja" or "en
 
@@ -13,6 +13,7 @@ Config.AllowedHelis = {
     "sparrow",
 }
 
-Config.MaxSpeed = 10.0  -- Speed limit to be unanchored
-Config.MaxAltitude = 3.0  -- Maximum altitude at which the helicopter can maintain anchor
+Config.SpeedUnit = "mph"    -- "mph" or "kmh" (Please select the one you use in your environment)
+Config.MaxSpeed = 10.0      -- Speed limit to be unanchored
+Config.MaxAltitude = 3.0    -- Maximum altitude at which the helicopter can maintain anchor
 
